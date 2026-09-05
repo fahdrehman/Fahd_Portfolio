@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahd Rehman | NHS Workforce Leadership</title>
+<meta name="description" content="Fahd Rehman — Temporary Staffing &amp; Medical Workforce Hub Manager at BHRUT. Personal portfolio and CV.">
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+    :root{
+      --bg: oklch(99% 0.006 290);
+      --bg-alt: oklch(96% 0.015 290);
+      --ink: oklch(20% 0.03 280);
+      --ink-soft: oklch(47% 0.02 280);
+      --line: oklch(90% 0.014 290);
+      --accent: oklch(56% 0.17 300);
+      --accent-2: oklch(56% 0.15 255);
+      --accent-3: oklch(56% 0.16 278);
+      --card: oklch(100% 0 0);
+    }
+    *{ box-sizing: border-box; }
+    html, body{ margin: 0; padding: 0; }
+    html{ scroll-behavior: smooth; }
+    body{
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .display{
+      font-family: 'Baloo 2', system-ui, sans-serif;
+      margin: 0;
+      letter-spacing: 0;
+    }
+    a{ color: inherit; text-decoration: none; }
+    p{ margin: 0; }
+    .mono{ font-family: 'IBM Plex Mono', monospace; }
+    .wrap{ max-width: 1120px; margin: 0 auto; padding: 0 40px; position: relative; }
+
+    .gradient-text{
+      background: linear-gradient(120deg, var(--accent), var(--accent-3), var(--accent-2), var(--accent));
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: var(--accent);
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 9s ease infinite;
+    }
+    @keyframes gradientShift{
+      0%{ background-position: 0% 50%; }
+      50%{ background-position: 100% 50%; }
+      100%{ background-position: 0% 50%; }
+    }
+
+    .kicker{
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn-primary{
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      color: white;
+      box-shadow: 0 10px 26px -8px oklch(56% 0.17 300 / 50%);
+    }
+    .btn-primary:hover{ box-shadow: 0 12px 30px -6px oklch(56% 0.17 300 / 60%); }
+    .btn-ghost{ border: 1px solid var(--line); color: var(--ink); background: var(--card); }
+    .btn-ghost:hover{ border-color: var(--accent); }
+    .section{ padding: 92px 0; position: relative; }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 1px 2px oklch(0% 0 0 / 3%), 0 14px 30px -20px oklch(50% 0.16 295 / 25%);
+    }
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .pill:hover{ border-color: var(--accent); color: var(--accent); }
+    .grid-2{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .grid-3{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .about-grid{ display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; }
+    .stat-row{ display: flex; gap: 16px; margin-top: 30px; }
+
+    .blob{ position: absolute; border-radius: 50%; filter: blur(75px); pointer-events: none; z-index: 0; }
+    .blob-1{ width: 420px; height: 420px; background: oklch(56% 0.17 300 / 28%); top: -120px; right: -60px; animation: drift1 17s ease-in-out infinite; }
+    .blob-2{ width: 360px; height: 360px; background: oklch(56% 0.15 255 / 24%); bottom: -140px; left: -80px; animation: drift2 21s ease-in-out infinite; }
+    .blob-3{ width: 300px; height: 300px; background: oklch(56% 0.16 278 / 24%); top: 40%; left: 30%; animation: drift3 25s ease-in-out infinite; }
+    @keyframes drift1{ 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(-35px, 30px) scale(1.08); } }
+    @keyframes drift2{ 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(30px, -25px) scale(1.05); } }
+    @keyframes drift3{ 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(20px, 25px) scale(1.1); } }
+
+    @keyframes floatY{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-10px); } }
+
+    .avatar-wrap{ position: relative; width: 320px; height: 320px; margin: 0 auto; }
+    .avatar-glow{ position: absolute; inset: -30px; border-radius: 50%; background: radial-gradient(circle, var(--accent) 0%, transparent 68%); filter: blur(46px); opacity: 0.5; animation: drift1 13s ease-in-out infinite; z-index: 0; }
+    .avatar-float{ animation: floatY 6s ease-in-out infinite; transform-box: fill-box; }
+    .ring-spin{ animation: ringSpin 18s linear infinite; transform-box: fill-box; transform-origin: 50% 50%; }
+    .orbit-spin{ animation: ringSpin 11s linear infinite; transform-box: fill-box; transform-origin: 50% 50%; }
+    .orbit-spin-rev{ animation: ringSpinRev 15s linear infinite; transform-box: fill-box; transform-origin: 50% 50%; }
+    @keyframes ringSpin{ to{ transform: rotate(360deg); } }
+    @keyframes ringSpinRev{ to{ transform: rotate(-360deg); } }
+    @keyframes wave{ 0%,100%{ transform: rotate(0deg); } 30%{ transform: rotate(20deg); } 60%{ transform: rotate(4deg); } }
+    .arm-wave{ animation: wave 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: 88% 90%; }
+    @keyframes blink{ 0%, 92%, 100%{ transform: scaleY(1); } 96%{ transform: scaleY(0.1); } }
+    .eye-blink{ animation: blink 4.8s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 50%; }
+
+    .avatar-photo{
+      width: 100%; height: auto; display: block;
+      -webkit-mask-image: radial-gradient(circle closest-side at 50% 46%, black 60%, black 67%, transparent 89%);
+      mask-image: radial-gradient(circle closest-side at 50% 46%, black 60%, black 67%, transparent 89%);
+    }
+
+    /* scroll-reveal */
+    .reveal{ opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(.2,.7,.2,1), transform 0.8s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in-view{ opacity: 1; transform: translateY(0); }
+    .reveal-stagger > *{ opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal-stagger.in-view > *{ opacity: 1; transform: translateY(0); }
+    .reveal-stagger.in-view > *:nth-child(1){ transition-delay: 0.05s; }
+    .reveal-stagger.in-view > *:nth-child(2){ transition-delay: 0.12s; }
+    .reveal-stagger.in-view > *:nth-child(3){ transition-delay: 0.19s; }
+
+    @media (max-width: 800px){
+      .grid-2, .about-grid, .grid-3{ grid-template-columns: 1fr; }
+      .stat-row{ flex-wrap: wrap; }
+      .section{ padding: 60px 0; }
+      .hero-grid{ flex-direction: column-reverse; }
+    }
+  
+</style>
+</head>
+<body>
+<div style="width:100%; background: var(--bg); overflow-x: hidden;">
+
+  <!-- HERO -->
+  <div id="home" class="wrap hero-grid" style="display:flex; align-items:center; gap: 56px; padding: 92px 40px 90px; min-height: 540px; overflow: hidden;">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div style="flex: 1 1 440px; position: relative; z-index: 1;">
+      <span class="kicker">// NHS Workforce Leadership</span>
+      <h1 class="gradient-text" style="font-size: clamp(2.6rem, 5vw, 4.1rem); font-weight: 800; line-height: 1.06;">Fahd Rehman.</h1>
+      <p class="display" style="font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 700; color: var(--ink); margin-top: 14px;">I lead medical workforce operations for the NHS.</p>
+      <p style="font-size: 16.5px; color: var(--ink-soft); line-height: 1.6; margin-top: 18px; max-width: 480px;">
+        Temporary Staffing &amp; Medical Workforce Hub Manager at BHRUT &mdash; responsible for the Trust's largest resident doctor cohort across General Internal Medicine, Acute Medicine and Emergency Medicine.
+      </p>
+
+      <div style="margin-top: 26px;">
+        <div class="mono" style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft);">Passionate about</div>
+        <div style="display:flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+          <span class="pill">Workforce equity</span>
+          <span class="pill">NHS digital transformation</span>
+          <span class="pill">Developing early careers</span>
+          <span class="pill">Data-led decisions</span>
+        </div>
+      </div>
+
+      <div style="display:flex; gap: 14px; margin-top: 30px; flex-wrap: wrap;">
+        <a href="#contact" class="btn btn-primary">Let's talk</a>
+        <a href="#experience" class="btn btn-ghost">My experience</a>
+      </div>
+      <div style="display:flex; gap: 12px; margin-top: 28px;">
+        <a href="mailto:fahd.f.rehman@gmail.com" class="pill">Email</a>
+        <a href="#" class="pill">LinkedIn</a>
+        <a href="https://github.com/fahdrehman/NHS-rtt-dashboard-data" class="pill">GitHub</a>
+      </div>
+    </div>
+
+    <div style="flex: 0 0 320px; position: relative; z-index: 1;">
+      <div class="avatar-wrap">
+        <div class="avatar-glow"></div>
+
+        <svg width="320" height="320" viewBox="0 0 320 320" style="position:absolute; inset:0; z-index:2; pointer-events:none;">
+          <g class="orbit-spin-rev">
+            <circle cx="160" cy="34" r="3.5" fill="var(--accent-2)"/>
+          </g>
+          <g class="orbit-spin">
+            <circle cx="272" cy="200" r="3" fill="var(--accent)"/>
+          </g>
+        </svg>
+
+        <div class="avatar-float" style="position:relative; z-index:1; width:320px; height:auto;">
+          <img src="avatar-illustration.jpg" alt="Fahd Rehman" class="avatar-photo">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" class="section" style="background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap reveal">
+      <span class="kicker">// About</span>
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; max-width: 640px; color: var(--ink);">Close to eight years building governed, compliant NHS workforce operations.</h2>
+      <div class="about-grid" style="margin-top: 36px;">
+        <div style="font-size: 16.5px; line-height: 1.7; color: var(--ink-soft);">
+          <p>I'm a Chartered MCIPD workforce leader with a career spanning three London NHS trusts &mdash; West London NHS Trust, The Hillingdon Hospitals NHS Foundation Trust, and now Barking, Havering and Redbridge University Hospitals (BHRUT).</p>
+          <p style="margin-top: 16px;">At BHRUT I run the Temporary Staffing and Medical Workforce Hub across Queen's Hospital and King George Hospital &mdash; overseeing bank and agency governance, e-rostering and compliance for the Trust's largest resident doctor cohort.</p>
+          <p style="margin-top: 16px;">Outside the day-to-day, I'm drawn to the bigger questions in NHS workforce policy &mdash; how staffing data can close inequalities, and how digital transformation changes the way trusts are run.</p>
+        </div>
+        <div class="stat-row">
+          <div class="card" style="padding: 20px 20px; flex: 1;">
+            <div class="display" style="font-size: 26px; font-weight: 700; color: var(--accent);">~8 yrs</div>
+            <div style="font-size: 13px; color: var(--ink-soft); margin-top: 4px;">NHS workforce management</div>
+          </div>
+          <div class="card" style="padding: 20px 20px; flex: 1;">
+            <div class="display" style="font-size: 26px; font-weight: 700; color: var(--accent);">3</div>
+            <div style="font-size: 13px; color: var(--ink-soft); margin-top: 4px;">London NHS trusts</div>
+          </div>
+          <div class="card" style="padding: 20px 20px; flex: 1;">
+            <div class="display" style="font-size: 26px; font-weight: 700; color: var(--accent);">2</div>
+            <div style="font-size: 13px; color: var(--ink-soft); margin-top: 4px;">Sites led</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div id="experience" class="section">
+    <div class="wrap reveal">
+      <span class="kicker">// Experience</span>
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; max-width: 640px; color: var(--ink);">Where I've worked, and what I've built along the way.</h2>
+
+      <div style="display:flex; flex-direction: column; gap: 0; margin-top: 36px; max-width: 760px;">
+        <div style="display:flex; gap: 20px; padding: 22px 0; border-top: 1px solid var(--line);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--accent); margin-top: 8px; flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight: 600; font-size: 17px; color: var(--ink);">Temporary Staffing &amp; Medical Workforce Hub Manager</div>
+            <div style="color: var(--ink-soft); font-size: 14.5px; margin-top: 3px;">BHRUT &middot; Queen's Hospital &amp; King George Hospital &middot; Current</div>
+          </div>
+        </div>
+        <div style="display:flex; gap: 20px; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--accent); margin-top: 8px; flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight: 600; font-size: 17px; color: var(--ink);">Temporary staffing &amp; medical workforce roles</div>
+            <div style="color: var(--ink-soft); font-size: 14.5px; margin-top: 3px;">West London NHS Trust &amp; The Hillingdon Hospitals NHS Foundation Trust</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top: 40px;">
+        <div class="card" style="padding: 26px;">
+          <div class="mono" style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-2);">Public Dashboard</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-top: 10px; color: var(--ink);">NHS RTT Waiting Times Dashboard</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6; margin-top: 10px;">
+            Public dashboard tracking Referral-to-Treatment performance across acute NHS trusts, refreshed automatically each month, using a size-adjusted ranking so trusts aren't unfairly compared.
+          </p>
+          <a href="https://github.com/fahdrehman/NHS-rtt-dashboard-data" style="display:inline-block; margin-top: 14px; font-weight: 600; font-size: 13.5px; color: var(--accent); border-bottom: 1px solid var(--accent);">View repository &rarr;</a>
+        </div>
+        <div class="card" style="padding: 26px;">
+          <div class="mono" style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-2);">MBA Research &middot; In progress</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-top: 10px; color: var(--ink);">EPR &amp; RTT Performance Research</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6; margin-top: 10px;">
+            Difference-in-differences analysis of 14 years of NHS England data across all 209 trusts, examining whether EPR go-lives affect waiting-time performance.
+          </p>
+        </div>
+        <div class="card" style="padding: 26px;">
+          <div class="mono" style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-2);">Industry Paper</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-top: 10px; color: var(--ink);">RLDatix Summit 2025</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6; margin-top: 10px;">
+            Authored a summit paper on reducing NHS agency staffing reliance, shared with the wider workforce systems community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUALIFICATIONS -->
+  <div id="qualifications" class="section" style="background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap reveal">
+      <span class="kicker">// Qualifications</span>
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: var(--ink);">Grounded in HR practice, sharpened by research.</h2>
+      <div style="display:flex; flex-direction: column; gap: 0; margin-top: 32px; max-width: 720px;">
+        <div style="display:flex; gap: 20px; padding: 20px 0; border-top: 1px solid var(--line);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--accent); margin-top: 8px; flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight: 600; font-size: 16.5px; color: var(--ink);">Executive MBA &mdash; Senior Healthcare Leader Apprenticeship</div>
+            <div style="color: var(--ink-soft); font-size: 14px; margin-top: 3px;">UCL Global Business School for Health &middot; In progress</div>
+          </div>
+        </div>
+        <div style="display:flex; gap: 20px; padding: 20px 0; border-top: 1px solid var(--line);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--accent); margin-top: 8px; flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight: 600; font-size: 16.5px; color: var(--ink);">CIPD Level 5 &middot; Chartered MCIPD</div>
+            <div style="color: var(--ink-soft); font-size: 14px; margin-top: 3px;">Chartered Institute of Personnel and Development</div>
+          </div>
+        </div>
+        <div style="display:flex; gap: 20px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--accent); margin-top: 8px; flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight: 600; font-size: 16.5px; color: var(--ink);">MSc Human Resource Management</div>
+            <div style="color: var(--ink-soft); font-size: 14px; margin-top: 3px;">Birkbeck, University of London</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERESTS -->
+  <div id="interests" class="section">
+    <div class="wrap reveal">
+      <span class="kicker">// Interests</span>
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: var(--ink);">Beyond the day job.</h2>
+      <div style="display:flex; flex-wrap: wrap; gap: 12px; margin-top: 30px;">
+        <span class="pill">Mentoring T-Level placement students</span>
+        <span class="pill">Writing on LinkedIn about public sector careers</span>
+        <span class="pill">Raspberry Pi &amp; health-data tinkering</span>
+        <span class="pill">Fitness &amp; personal wellbeing</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" class="section" style="background: var(--ink); overflow: hidden;">
+    <div class="blob blob-3" style="opacity: 0.5;"></div>
+    <div class="wrap reveal" style="text-align:center; position: relative; z-index: 1;">
+      <span class="kicker" style="justify-content:center; color: oklch(78% 0.09 300);">// Get in touch</span>
+      <h2 class="gradient-text" style="font-size: clamp(2.2rem, 4.4vw, 3.4rem); font-weight: 800;">Let's talk.</h2>
+      <p style="color: oklch(78% 0.02 290); font-size: 16px; margin-top: 16px;">Open to conversations on NHS workforce strategy, e-rostering and bank/agency governance.</p>
+      <div style="display:flex; gap: 14px; justify-content: center; margin-top: 30px; flex-wrap: wrap;">
+        <a href="mailto:fahd.f.rehman@gmail.com" class="btn btn-primary">fahd.f.rehman@gmail.com</a>
+        <a href="#" class="btn" style="border: 1px solid oklch(45% 0.02 290); color: oklch(96% 0.01 290);">LinkedIn</a>
+        <a href="https://github.com/fahdrehman/NHS-rtt-dashboard-data" class="btn" style="border: 1px solid oklch(45% 0.02 290); color: oklch(96% 0.01 290);">GitHub</a>
+      </div>
+      <div style="margin-top: 52px; padding-top: 22px; border-top: 1px solid oklch(32% 0.02 290); font-size: 13px; color: oklch(65% 0.02 290);">
+        fahd.uk
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('in-view'); });
+  }
+});
+</script>
+</body>
+</html>
